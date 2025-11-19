@@ -1,0 +1,202 @@
+.page {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;         
+  padding: 16px 64px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: var(--foreground);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;     
+  text-align: center;       
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.subtitle {
+  font-size: 15px;
+  opacity: 0.85;
+  max-width: 520px;
+}
+
+.sectionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionBody {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 16px;
+  padding: 0 16px;
+  overflow: hidden;
+  transition:
+    max-height 0.6s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    padding-bottom 0.4s ease,
+    padding-top 0.4s ease;
+}
+
+.sectionBodyClosed {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.sectionBodyOpen {
+  max-height: 1200px; 
+  opacity: 1;
+  transform: translateY(0);
+  padding-top: 10px;
+  padding-bottom: 14px;
+}
+
+.sectionHeader {
+  width: 100%;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sectionHeaderText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.sectionHeader h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sectionSummary {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.sectionIcon {
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+
+.section {
+  border-radius: 16px;
+  border: 1px solid rgba(240, 240, 240, 0.14);
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+
+  transition:
+    border-color 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+    background-color 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+    opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0.85;
+}
+
+.sectionOpen {
+  border-color: rgba(240, 240, 240, 0.28);
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+
+
+.sectionText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionText p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.sectionMedia {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.mediaPlaceholder {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px dashed rgba(240, 240, 240, 0.18);
+  font-size: 12px;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 8px;
+}
+
+.backLink {
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.backLink:hover {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .main {
+    padding: 40px 16px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .sectionBody {
+    grid-template-columns: 1fr;
+  }
+
+  .mediaPlaceholder {
+    min-height: 120px;
+  }
+}
