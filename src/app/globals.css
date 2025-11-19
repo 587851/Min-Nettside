@@ -3,37 +3,29 @@
   --foreground: #f0f0f0;
 }
 
-/* Basic document setup */
 html,
 body {
-  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: var(--background);
+  min-height: 100vh;
+  margin: 0;
   color: var(--foreground);
+  background: var(--background);
+  overflow-y: auto;
 }
 
-/* Universal reset */
 * {
   box-sizing: border-box;
 }
 
-/* Buttons container */
 .ctas {
   width: 100%;
   max-width: 440px;
 }
 
-/* Vertical spacing wrapper for ReactiveButton */
 .cta-wrapper {
   width: 100%;
   margin-bottom: 24px;
