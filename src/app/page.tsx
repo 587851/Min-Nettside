@@ -33,7 +33,7 @@ export default function Home() {
                 onClick={() => openSite('omMeg', '/om-meg')}
                 idleText="Om meg"
                 loadingText="Åpner…"
-                successText="Ferdig!"
+                successText="Åpner…"
                 color="red"
                 size="large"
                 rounded
@@ -49,7 +49,7 @@ export default function Home() {
                 onClick={() => openSite('minCv', '/min-cv')}
                 idleText="Min CV"
                 loadingText="Åpner…"
-                successText="Ferdig!"
+                successText="Åpner…"
                 color="yellow"
                 size="large"
                 rounded
