@@ -47,9 +47,8 @@ export default function MinCvPage() {
                 <span className={styles.entryTitle}>Høgskulen på Vestlandet, Bergen</span>
                 <span className={styles.entryPeriod}>August 2019 – Juni 2023</span>
               </div>
-              <p className={styles.entrySubtitle}>Realfagskurs - 1 år</p>
               <p className={styles.entrySubtitle}>Bachelor i dataingeniør med spesialisering i programutvikling - 3 år</p>
-
+              <p className={styles.entrySubtitle}>Realfagskurs - 1 år</p>
             </div>
 
             <div className={styles.entry}>
